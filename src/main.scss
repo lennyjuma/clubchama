@@ -1,0 +1,404 @@
+@charset "utf-8";
+@import "~bulma/bulma";
+
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,700|Montserrat:400,700');
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100');
+
+
+  
+//Imports
+@import './partials/colors';
+@import './partials/navbar';
+@import './partials/dropdowns';
+@import './partials/sections';
+@import './partials/hero';
+@import './partials/footer';
+@import './partials/buttons';
+@import './partials/cards';
+@import './partials/forms';
+@import './partials/animations';
+@import './partials/sidebar';
+@import './partials/testimonials';
+@import './partials/responsive';
+@import './partials/utils';
+
+
+.txt {
+    width:400px;
+    padding:100px;
+    font-family:arial;
+    font-size:40px; 
+    float:left;
+    display:block;
+  }
+
+.navbar-item {
+    color:#4a4a4a !important;
+  }
+.el-carousel__item h3 {
+    color: primary;
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 150px;
+    margin: 0;
+  }
+
+.el-carousel__item:nth-child(2n) {
+    background-color: primary;
+  }
+
+.el-carousel__item:nth-child(2n+1) {
+    background-color: primary;
+  }
+
+  .sektion{
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+  }
+
+  .box
+  {
+    
+    width: 700px;
+    height: 200px;
+    padding: 50px;
+  }
+  #box
+  {
+    
+    width: 700px;
+    height: 200px;
+    padding: 50px;
+  }
+
+//   @font-face {
+// 		font-family: 'Sucrose Bold Two';
+// 		src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/sucrose.woff2') format('woff2');
+// 		}
+// @font-face {
+//     font-family: 'IM Fell French Canon Pro';
+//     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/im-fell-french-canon-pro.woff2') format('woff2');
+// }
+// * {
+//   box-sizing: border-box;
+// }
+// body {
+//   margin: 0;
+// }
+// header { 
+// 	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/mountain-range.jpg) no-repeat;
+// 	padding-top: 61.93333333%;
+// 	background-size: cover;
+//   font-family: 'Sucrose Bold Two';
+// }
+// header img {
+// 	position: absolute;
+// 	top: 0;
+// 	right: 0;
+// 	width: 45.8%;
+// }
+// header h1 { 
+// 	position: fixed;
+// 	top: 2rem;
+// 	right: 2rem;
+//   font-size: 12vw;
+//   line-height: .8;
+//   margin-top: 0;
+//   text-align: center;
+// }
+// header h1 span {
+//   display: block;
+//   font-size: 8.75vw;
+// }
+// main { 
+//   background: #fff;
+//   position: relative;
+//   border: 1px solid #fff;
+//   font-family: 'IM Fell French Canon Pro';
+//   font-size: 1.4rem;
+//   padding: 2rem 25%;
+//   line-height: 1.6;
+// }
+// @media all and (max-width: 400px) {
+//   main { padding: 2rem; }
+// }
+
+
+//make partle-js background
+#particles-js canvas{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+/* ---------- Container for the orbiting circles animation ---------- */
+#circle-orbit-container {
+  position: absolute;
+  top: 0.1px;
+  left: -10px;
+  height: 5px;
+  width: 5px;
+}
+
+
+/* ---------- Inner orbit - This is the circles closest to the central point ---------- */
+#inner-orbit {
+  position: absolute;
+  top: 75px;
+  left: 75px;
+  width: 150px;
+  height: 150px;
+  border: 2px #4A437F dashed;
+  border-radius: 100%;
+  -webkit-animation: spin-right 10s linear infinite;
+  animation: spin-right 10s linear infinite;
+}
+#heel {
+  position: absolute;
+  top: 89px;
+  left: 85px;
+  width: 150px;
+  height: 100px;
+ /* border: 2px #4A437F dashed; */
+  border-radius: 100%;
+  /*-webkit-animation: spin-right 10s linear infinite;
+  animation: spin-right 10s linear infinite; */
+}
+
+/* ---------- Repeating styles for the inner orbiting circles ---------- */
+.inner-orbit-cirlces {
+  position: absolute;
+  top: 62px;
+  left: -6px;
+  height: 18px;
+  width: 18px;
+  border-radius: 100%;
+  background-color: orange;
+}
+
+
+
+/* ---------- Middle orbit - This is the circles second closest to the central point ---------- */
+#middle-orbit {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  width: 225px;
+  height: 225px;
+  border: 2px #4A437F dashed;
+  border-radius: 100%;
+  -webkit-animation: spin-right 15s linear infinite;
+  animation: spin-right 15s linear infinite;
+}
+
+/* ---------- Repeating styles for the inner orbiting circles ---------- */
+.middle-orbit-cirlces {
+  position: absolute;
+  top: 25px;
+  left: 17px;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: #4A437F;
+}
+
+/* 
+/* ---------- Animation ---------- */
+@-webkit-keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* ==========================================================================
+2. Infinite rotate
+========================================================================== */
+
+@keyframes rotating {
+  from {
+      transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotating {
+  from {
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 6s linear infinite;
+  -moz-animation: rotating 6s linear infinite;
+  -ms-animation: rotating 6s linear infinite;
+  -o-animation: rotating 6s linear infinite;
+  animation: rotating 6s linear infinite;
+}
+
+//navbar ya pili
+ //Navbar
+ .navbar {
+  position: relative;
+  min-height: 4rem;
+  transition: all .3s;
+  z-index: 99;
+  .container {
+      min-height: 4rem;
+  }
+  //Responsive menu icon
+  .navbar-burger {
+      width: 4rem;
+      height: 4rem;
+  }
+  //Brand
+  .navbar-brand {
+      min-height: 4rem;
+      img {
+          max-height: 36px !important;
+          height: 36px;
+      }
+      //brand text
+      .brand-name {
+          font-family: 'Cabin', sans-serif;
+          font-size: 1.2rem;
+          font-weight: 600;
+          padding: 0 10px;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+      }
+      //Removing navbar item default hover behaviour
+      &:hover {
+          .navbar-item {
+              background: transparent !important;
+          }
+      }
+  }
+  //Navbar items
+  .navbar-item {
+      a.button {
+          font-family: 'Cabin', sans-serif; 
+          text-transform: uppercase;
+          &.hover {
+              font-size: .75rem !important;
+              font-weight: 500 !important;
+          }
+      }
+      //Nav link modifier
+      &.is-nav-link {
+          a {
+              font-family: 'Cabin', sans-serif;
+              text-transform: uppercase;
+              font-size: .75rem;
+          }
+      }
+      a.is-active {
+          color: $secondary;
+      }
+  }
+  //Color modifiers
+  &.is-light, &.is-dark {
+      .navbar-brand {
+          .brand-name {
+              color: $white;
+          }
+          .navbar-link::after {
+              border-color: $white;
+          }
+      }
+      .navbar-item {
+          a {
+              color: $white;
+          }
+      }
+      .navbar-burger span {
+          background-color: $white !important;
+      }
+      //Responsive menu
+      .navbar-menu {
+          &.is-active {
+              position: absolute;
+              width: 100%;
+          }
+      }
+  }
+
+  //Fixed navbar modifier
+  &.is-fixed {
+      min-height: 4rem !important;
+      background: $white;
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.12);
+      a {
+          color: $dark-text;
+          &:hover {
+              color: $primary;
+          }
+      }
+      //Dark modifier
+      &.is-dark {
+          background: #2d0275 !important;
+          a {
+              color: $white;
+              &:hover {
+                  color: #fcfcfc;
+              }
+          }
+          .navbar-menu {
+              &.is-active {
+                  background: #2d0275 !important;
+              }
+          }
+      }
+  }
+}
+//Cloned fixed navbar
+#navbar-clone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(-100%);
+  z-index: 100;
+  &.is-active {
+      transform: translateY(0); 
+  }
+}
+//logo
+.hero-logo {
+  height: 80px;
+}
+
+
+//Telegram icon tweaking to insert into navbar
+.telegram {
+height: 13px;
+margin: 0 5px;
+position: relative;
+top: 2px;
+}
+
+//sidebar element
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 200px;
+  min-height: 400px;
+}
