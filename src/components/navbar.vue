@@ -5,7 +5,7 @@
     <div  class="container">
         <div class="navbar-brand">
             <a href="/" class="navbar-item">
-                        <img  src="public/img/heel3.jpg" alt="">
+                        <img  src="public/img/13.png" alt="">
                         <span class="brand-name">Club Eight</span>
                     </a>
             <a class="navbar-item is-hidden-touch is-hidden-desktop">
