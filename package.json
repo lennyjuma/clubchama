@@ -48,7 +48,7 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "gulp-concat": "^2.6.0",
     "gulp-sourcemaps": "^1.6.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "json-loader": "^0.5.7",
     "mq4-hover-shim": "^0.3.0",
     "node-sass": "^4.12.0",
